@@ -2,5 +2,11 @@
 - name: Install some packages
   hosts: Intégration Centreon
   tasks:
-    - name: Install some utilities
- 
+    - name: Install the nano editor
+      yum:
+        name: nano
+        state: present
+     - name: Install the LDAP clients
+      yum:
+        name: openldap-clients
+        state: present
