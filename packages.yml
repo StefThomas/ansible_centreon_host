@@ -1,0 +1,6 @@
+---
+- name: Install some packages
+  hosts: Intégration Centreon
+  tasks:
+    - name: Install some utilities
+ 
