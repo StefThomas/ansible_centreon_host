@@ -6,7 +6,7 @@
       yum:
         name: nano
         state: present
-     - name: Install the LDAP clients
+    - name: Install the LDAP clients
       yum:
         name: openldap-clients
         state: present
