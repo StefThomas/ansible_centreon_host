@@ -10,3 +10,8 @@
       yum:
         name: openldap-clients
         state: present
+    - name: Install the lsof utility
+      yum:
+        name: lsof
+        state: present
+ 
