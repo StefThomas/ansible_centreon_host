@@ -4,5 +4,5 @@
   tasks:
     - name: Ensure some files aren’t world-writable
       command:
-        cmd: chmod 0600 /etc/dnf/dnf.cf /etc/yum.conf
+        cmd: chmod 0600 /etc/dnf/dnf.conf /etc/yum.conf
     
