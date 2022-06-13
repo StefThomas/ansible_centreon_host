@@ -1,6 +1,6 @@
 ---
 - name: Prerequisites
-   hosts: Integration_Centreon
+  hosts: Integration_Centreon
    tasks:
      - name: Install DNF
         shell:
