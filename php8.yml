@@ -4,10 +4,10 @@
   tasks:
     - name: Reset module PHP
       command:
-        cmd: dnf module reset php
+        cmd: dnf -y module reset php
         warn: false
     - name: Install PHP 8
       command:
-        cmd: dnf module install php:remi-8.0
+        cmd: dnf -y module install php:remi-8.0
         warn: false
  
