@@ -5,12 +5,16 @@
     - name: Install DNF
       shell:
         cmd: dnf install -y dnf-plugins-core
+      warn: false
     - name: Install EPEL repository
       shell:
         cmd: dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+      warn: false
     - name: Install REMI repository
       shell:
         cmd: dnf install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+      warn: false
     - name: Enable CodeReady Builder repository
       shell:
-        cmd: subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms 
+        cmd: subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms
+      warn: false
