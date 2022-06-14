@@ -1,6 +1,6 @@
 ---
 - name: Activate PHP 8
-  hosts: serveurs centraux centreon
+  hosts: centraux_centreon
   tasks:
     - name: Reset module PHP
       command:
