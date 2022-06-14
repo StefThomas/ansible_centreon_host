@@ -1,0 +1,8 @@
+---
+- name: Install some packages on the database server only
+  hosts: database_centreon
+  tasks:
+    - name: Install the centreon-database package
+      yum:
+        name: centreon-database
+        state: present
