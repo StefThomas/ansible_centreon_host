@@ -1,0 +1,8 @@
+---
+- name: Install some packages on central server only
+  hosts: centraux_centreon
+  tasks:
+    - name: Install the centreon-central package
+      yum:
+        name: centreon-central
+        state: present
