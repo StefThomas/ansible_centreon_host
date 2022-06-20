@@ -6,3 +6,7 @@
       yum:
         name: centreon-central
         state: present
+    - name: Install the policycoreutils-python-utils package
+      yum:
+        name: policycoreutils-python-utils
+        state: present
