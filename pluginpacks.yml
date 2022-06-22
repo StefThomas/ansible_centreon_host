@@ -1,0 +1,8 @@
+---
+- name: Install some plugin packs
+  hosts: centraux_centreon
+  tasks:
+    - name: Install plugin packs for the monitoring of the Centreon plateform itself
+      command:
+        cmd: yum -y install centreon-pack-base-generic centreon-pack-operatingsystems-linux-snmp centreon-pack-applications-databases-mysql centreon-pack-applications-monitoring-centreon-database centreon-pack-applications-monitoring-centreon-central centreon-pack-applications-monitoring-centreon-poller
+        warn: false
