@@ -22,6 +22,10 @@
       command:
         cmd: firewall-cmd --zone=public --add-service=snmptrap --permanent
         warn: false
+    - name: Add rule for Gorgone
+      command:
+        cmd: firewall-cmd --zone=public --add-port=5556/tcp --permanent
+        warn: false
     - name: Reload Firewalld
       command:
         cmd: firewall-cmd --reload
