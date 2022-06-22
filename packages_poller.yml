@@ -6,3 +6,7 @@
       yum:
         name: policycoreutils-python-utils
         state: present
+    - name: Install the centreon-poller package
+      yum:
+        name: centreon-poller
+        state: present
