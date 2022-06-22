@@ -1,6 +1,6 @@
 ---
-- name: Install and configure Firewalld on database server
-  hosts: database_centreon
+- name: Install and configure Firewalld on central server
+  hosts: centraux_centreon
   tasks:
     - name: Install the fiirewalld package
       yum:
