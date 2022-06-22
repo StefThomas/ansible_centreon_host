@@ -18,6 +18,14 @@
       command:
         cmd: firewall-cmd --zone=public --add-service=ssh --permanent
         warn: false
+    - name: Add rule for SNMP
+      command:
+        cmd: firewall-cmd --zone=public --add-service=snmp --permanent
+        warn: false
+    - name: Add rule for SNMPTRAP
+      command:
+        cmd: firewall-cmd --zone=public --add-service=snmptrap --permanent
+        warn: false
     - name: Reload Firewalld
       command:
         cmd: firewall-cmd --reload
