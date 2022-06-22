@@ -2,7 +2,7 @@
 - name: Install and configure Firewalld on central server
   hosts: centraux_centreon
   tasks:
-    - name: Install the fiirewalld package
+    - name: Install the firewalld package
       yum:
         name: firewalld
         state: present
