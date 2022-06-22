@@ -32,11 +32,11 @@
         warn: false
     - name: Add rule for Gorgone
       command:
-        cmd: firewall-cmd --zone=public --add-service=5556/tcp --permanent
+        cmd: firewall-cmd --zone=public --add-port=5556/tcp --permanent
         warn: false
     - name: Add rule for Broker
       command:
-        cmd: firewall-cmd --zone=public --add-service=5669/tcp --permanent
+        cmd: firewall-cmd --zone=public --add-port=5669/tcp --permanent
         warn: false
     - name: Reload Firewalld
       command:
