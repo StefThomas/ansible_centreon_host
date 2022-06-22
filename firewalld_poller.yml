@@ -1,0 +1,28 @@
+---
+- name: Install and configure Firewalld on database server
+  hosts: database_centreon
+  tasks:
+    - name: Install the fiirewalld package
+      yum:
+        name: firewalld
+        state: present
+    - name: Activate and start Firewalld
+      shell:
+         cmd: systemctl enable firewalld && systemctl start firewalld
+         warn: false
+    - name: Add rule for SSH
+      command:
+        cmd: firewall-cmd --zone=public --add-service=ssh --permanent
+        warn: false
+    - name: Add rule for SNMP
+      command:
+        cmd: firewall-cmd --zone=public --add-service=snmp --permanent
+        warn: false
+    - name: Add rule for SNMPTRAP
+      command:
+        cmd: firewall-cmd --zone=public --add-service=snmptrap --permanent
+        warn: false
+    - name: Reload Firewalld
+      command:
+        cmd: firewall-cmd --reload
+        warn: false
