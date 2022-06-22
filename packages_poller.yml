@@ -10,3 +10,7 @@
       yum:
         name: centreon-poller
         state: present
+    - name: Install the net-snmp-utils package
+      yum:
+        name: net-snmp-utils
+        state: present
