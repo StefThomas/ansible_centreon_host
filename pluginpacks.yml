@@ -6,3 +6,7 @@
       command:
         cmd: yum -y install centreon-pack-base-generic centreon-pack-operatingsystems-linux-snmp centreon-pack-applications-databases-mysql centreon-pack-applications-monitoring-centreon-database centreon-pack-applications-monitoring-centreon-central centreon-pack-applications-monitoring-centreon-poller
         warn: false
+    - name: Install more plugin packs
+      command:
+        cmd: yum -y install centreon-pack-applications-databases-mysql centreon-pack-applications-databases-mssql centreon-pack-applications-databases-oracle centreon-pack-applications-databases-postgresql centreon-pack-hardware-servers-cisco-ucs-snmp centreon-pack-operatingsystems-windows-snmp centreon-pack-cloud-prometheus-api centreon-pack-cloud-prometheus-kubernetes-api centreon-pack-applications-webservers-apache-serverstatus
+        warn: false
