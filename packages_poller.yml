@@ -14,3 +14,7 @@
       yum:
         name: net-snmp-utils
         state: present
+    - name: Install the rsync package
+      yum:
+        name: rsync
+        state: present
