@@ -14,4 +14,8 @@
       yum:
         name: lsof
         state: present
+    - name: Install the traceroute utility
+      yum:
+        name: traceroute
+        state: present
  
