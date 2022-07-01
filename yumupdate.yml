@@ -1,5 +1,6 @@
 - name: Update all packages
   hosts: Integration_Centreon
+  gather_facts: false
   tasks:
     - name: Update all packages
       yum:
