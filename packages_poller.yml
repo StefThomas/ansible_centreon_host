@@ -1,6 +1,7 @@
 ---
 - name: Install some packages on poller only
   hosts: collecteurs_centreon
+  gather_facts: false
   tasks:
     - name: Install the policycoreutils-python-utils package
       yum:
