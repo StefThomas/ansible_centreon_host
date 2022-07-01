@@ -1,6 +1,7 @@
 ---
 - name: Install some packages
   hosts: Integration_Centreon
+  gather_facts: false
   tasks:
     - name: Install the nano editor
       yum:
