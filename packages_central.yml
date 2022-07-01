@@ -1,6 +1,7 @@
 ---
 - name: Install some packages on central server only
   hosts: centraux_centreon
+  gather_facts: false
   tasks:
     - name: Install the centreon-central package
       yum:
