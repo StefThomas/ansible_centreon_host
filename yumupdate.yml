@@ -10,7 +10,7 @@
 #        lock_timeout: 60
     - name: Update all packages
       command:
-        arg: dnf -y --setopt=timeout=120 --setopt=minrate=100 update 
+        cmd: dnf -y --setopt=timeout=120 --setopt=minrate=100 update 
         warn: false
         
 
