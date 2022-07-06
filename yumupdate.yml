@@ -2,8 +2,15 @@
   hosts: Integration_Centreon
   gather_facts: false
   tasks:
+# Nor the yum nor the dnf Ansible module can set timeout and minrate options, using the command module, see below
+#    - name: Update all packages
+#      yum:
+#        name: '*'
+#        state: latest
+#        lock_timeout: 60
     - name: Update all packages
-      yum:
-        name: '*'
-        state: latest
+      command:
+        arg: dnf -y --setopt=timeout=120 --setopt=minrate=100 update 
+        warn: false
+        
 
