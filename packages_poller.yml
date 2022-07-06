@@ -23,4 +23,3 @@
       yum:
         name: centreon-plugin-Applications-Protocol-Nrpe
         state: present
-
