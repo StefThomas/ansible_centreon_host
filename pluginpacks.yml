@@ -11,3 +11,28 @@
       command:
         cmd: yum -y install centreon-pack-applications-databases-mysql centreon-pack-applications-databases-mssql centreon-pack-applications-databases-oracle centreon-pack-applications-databases-postgresql centreon-pack-hardware-servers-cisco-ucs-snmp centreon-pack-operatingsystems-windows-snmp centreon-pack-cloud-prometheus-api centreon-pack-cloud-prometheus-kubernetes-api centreon-pack-applications-webservers-apache-serverstatus
         warn: false
+    - name: Install all the plugin packs that were installed on the current plateform
+      command:
+        cmd: >-
+          dnf -y install centreon-pack-operatingsystems-linux-snmp centreon-pack-applications-monitoring-centreon-central centreon-pack-applications-databases-mysql 
+          centreon-pack-applications-monitoring-centreon-database centreon-pack-applications-monitoring-centreon-poller centreon-pack-operatingsystems-aix-snmp 
+          centreon-pack-operatingsystems-linux-nrpe centreon-pack-operatingsystems-windows-nrpe centreon-pack-operatingsystems-windows-snmp 
+          centreon-pack-applications-protocol-http centreon-pack-applications-databases-mssql centreon-pack-applications-databases-oracle 
+          centreon-pack-applications-databases-postgresql centreon-pack-network-firewalls-checkpoint-snmp centreon-pack-virtualization-vmware2-esx 
+          centreon-pack-virtualization-vmware2-esx-wsman centreon-pack-virtualization-vmware2-vm centreon-pack-virtualization-vmware2-vcenter-generic 
+          centreon-pack-virtualization-vmware2-vcenter-6 centreon-pack-hardware-servers-hp-blade-chassis-snmp centreon-pack-hardware-servers-hp-ilo-xmlapi 
+          centreon-pack-hardware-servers-hp-snmp centreon-pack-hardware-servers-cisco-ucs-snmp centreon-pack-network-cisco-standard-snmp 
+          centreon-pack-network-firewalls-cisco-asa-snmp centreon-pack-network-switchs-cisco-smallbusiness-standard-snmp centreon-pack-network-cisco-wlc-snmp 
+          centreon-pack-network-cisco-ironport-snmp centreon-pack-network-cisco-esa-xmlapi centreon-pack-network-oneaccess-snmp 
+          centreon-pack-applications-weblogic-jmx centreon-pack-applications-webservers-apache-serverstatus centreon-pack-hardware-servers-ibm-bladecenter-snmp 
+          centreon-pack-network-citrix-sdx-snmp centreon-pack-applications-webservers-tomcat-jmx centreon-pack-applications-webservers-tomcat-webmanager 
+          centreon-pack-applications-databases-mongodb centreon-pack-applications-ibm-tsm-dsmadmc centreon-pack-applications-protocol-x509 
+          centreon-pack-applications-protocol-tcp centreon-pack-hardware-storage-hitachi-standard-snmp centreon-pack-hardware-storage-hitachi-hnas-snmp 
+          centreon-pack-applications-webservers-iis-nsclient-05-restapi centreon-pack-applications-databases-elasticsearch 
+          centreon-pack-operatingsystems-windows-nsclient-05-restapi centreon-pack-hardware-storage-netapp-snmp centreon-pack-network-generic-bluecoat-snmp 
+          centreon-pack-cloud-kubernetes-api centreon-pack-applications-haproxy-snmp centreon-pack-applications-antivirus-mcafee-webgateway-snmp 
+          centreon-pack-applications-mscs-nrpe centreon-pack-applications-protocol-ssh centreon-pack-cloud-prometheus-api centreon-pack-applications-rubrik-restapi 
+          centreon-pack-applications-wallix-bastion-snmp centreon-pack-cloud-aws-s3 centreon-pack-hardware-servers-dell-idrac-snmp 
+          centreon-pack-cloud-prometheus-node-exporter-api centreon-pack-applications-protocol-ldap centreon-pack-applications-protocol-dns
+        warn: false
+ 
