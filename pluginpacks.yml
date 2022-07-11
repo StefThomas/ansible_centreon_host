@@ -33,6 +33,6 @@
           centreon-pack-cloud-kubernetes-api centreon-pack-applications-haproxy-snmp centreon-pack-applications-antivirus-mcafee-webgateway-snmp 
           centreon-pack-applications-mscs-nrpe centreon-pack-applications-protocol-ssh centreon-pack-cloud-prometheus-api centreon-pack-applications-rubrik-restapi 
           centreon-pack-applications-wallix-bastion-snmp centreon-pack-cloud-aws-s3 centreon-pack-hardware-servers-dell-idrac-snmp 
-          centreon-pack-cloud-prometheus-node-exporter-api centreon-pack-applications-protocol-ldap centreon-pack-applications-protocol-dns
+          centreon-pack-cloud-prometheus-node-exporter-api centreon-pack-applications-protocol-ldap centreon-pack-applications-protocol-dns centreon-pack-applications-monitoring-openmetrics
         warn: false
  
