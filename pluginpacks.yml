@@ -1,6 +1,6 @@
 ---
 - name: Install some plugin packs
-  hosts: centraux_centreon
+  hosts: central_centreon
   gather_facts: false
   tasks:
     - name: Install plugin packs for the monitoring of the Centreon plateform itself
