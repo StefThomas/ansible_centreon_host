@@ -19,4 +19,8 @@
       yum:
         name: traceroute
         state: present
+    - name: Install the needs-restarting utility
+      yum:
+        name: needs-restarting
+        state: present
  
