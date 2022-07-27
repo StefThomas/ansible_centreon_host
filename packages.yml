@@ -5,6 +5,6 @@
   tasks:
     - name: Install useful utilities
       yum:
-        name: nano openldap-clients lsof traceroute yum-utils
+        name: nano, openldap-clients, lsof, traceroute, yum-utils
         state: present
  
