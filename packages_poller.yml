@@ -19,7 +19,7 @@
       yum:
         name: rsync
         state: present
-    - name: Install the NRPE plugin
+    - name: Install some monitoring plugins
       yum:
-        name: centreon-plugin-Applications-Protocol-Nrpe
+        name: centreon-plugin-Applications-Protocol-Nrpe, centreon-plugin-Applications-Protocol-Tcp
         state: present
