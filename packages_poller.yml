@@ -21,5 +21,10 @@
         state: present
     - name: Install some monitoring plugins
       yum:
-        name: centreon-plugin-Applications-Protocol-Nrpe, centreon-plugin-Applications-Protocol-Tcp, centreon-plugin-Network-Firewalls-Checkpoint-Snmp, nagios-plugins-cluster
+        name:
+          - centreon-plugin-Applications-Protocol-Nrpe
+          - centreon-plugin-Applications-Protocol-Tcp
+          - centreon-plugin-Network-Firewalls-Checkpoint-Snmp
+          - nagios-plugins-cluster
+          - nagios-plugins-snmp
         state: present
