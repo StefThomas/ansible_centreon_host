@@ -27,4 +27,5 @@
           - centreon-plugin-Network-Firewalls-Checkpoint-Snmp
           - nagios-plugins-cluster
           - nagios-plugins-snmp
+          - centreon-plugin-Applications-Protocol-X509
         state: present
