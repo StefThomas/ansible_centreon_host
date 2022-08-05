@@ -28,4 +28,5 @@
           - nagios-plugins-cluster
           - nagios-plugins-snmp
           - centreon-plugin-Applications-Protocol-X509
+          - centreon-plugin-Operatingsystems-Aix-Snmp
         state: present
