@@ -29,6 +29,7 @@
           - nagios-plugins-snmp
           - centreon-plugin-Applications-Protocol-X509
           - centreon-plugin-Operatingsystems-Aix-Snmp
+          - centreon-plugin-Applications-Databases-Oracle
         state: present
     - name: Install miscellaneaous packages
       yum:
