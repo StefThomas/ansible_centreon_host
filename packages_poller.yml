@@ -30,3 +30,7 @@
           - centreon-plugin-Applications-Protocol-X509
           - centreon-plugin-Operatingsystems-Aix-Snmp
         state: present
+    - name: Install miscellaneaous packages
+      yum:
+        name: jq
+        state: present
