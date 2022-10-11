@@ -19,3 +19,7 @@
       yum:
         name: rsync
         state: present
+     - name: Install miscellaneaous packages
+       yum:
+         name: jq
+         state: present
