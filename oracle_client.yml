@@ -1,0 +1,12 @@
+---
+- name: Install Oracle packages
+  hosts: Integration_Centreon
+  gather_facts: false
+  tasks:
+    - name: Install Oracle client
+      dnf:
+        name:
+          files/oracle-instantclient-basic-21.7.0.0.0-1.el8.x86_64.rpm
+          files/oracle-instantclient-devel-21.7.0.0.0-1.el8.x86_64.rpm
+          files/oracle-instantclient-sqlplus-21.7.0.0.0-1.el8.x86_64.rpm
+        state: present
