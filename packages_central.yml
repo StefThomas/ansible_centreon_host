@@ -21,5 +21,5 @@
         state: present
      - name: Install miscellaneaous packages
        yum:
-         name: jq, python2-pip
+         name: jq, bind-utils
          state: present

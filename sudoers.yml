@@ -1,0 +1,11 @@
+---
+- name: Edit sudo configuration
+  hosts: central_centreon
+  gather_facts: false
+  tasks:
+    - name: sudo configuration for grabinventorymonitoring
+      lineinfile:
+        path: /etc/sudoers.d/grabinventorymonitoring
+        line: grabinventorymonitoring  ALL=(ALL) NOPASSWD: /var/spool/centreon/* *
+        validate: '/usr/sbin/visudo -cf %s'
+
