@@ -1,6 +1,6 @@
 ---
 - name: Install Oracle packages
-  hosts: Integration_Centreon
+  hosts: collecteurs_centreon, central_centreon
   gather_facts: false
   tasks:
     - name: Install Oracle client
