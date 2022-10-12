@@ -7,5 +7,6 @@
       lineinfile:
         path: '/etc/sudoers.d/grabinventorymonitoring'
         line: 'grabinventorymonitoring  ALL=(ALL) NOPASSWD: /var/spool/centreon/* *'
+        create: yes
         validate: '/usr/sbin/visudo -cf %s'
 
