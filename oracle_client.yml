@@ -6,7 +6,7 @@
     - name: Install Oracle client
       dnf:
         name:
-          - https://github.com/StefThomas/ansible_centreon_host/blob/main/files/oracle-instantclient-basic-21.7.0.0.0-1.el8.x86_64.rpm
-          - https://github.com/StefThomas/ansible_centreon_host/blob/main/files/oracle-instantclient-devel-21.7.0.0.0-1.el8.x86_64.rpm
-          - https://github.com/StefThomas/ansible_centreon_host/blob/main/files/oracle-instantclient-sqlplus-21.7.0.0.0-1.el8.x86_64.rpm
+          - http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/oracle-instantclient-basic-21.7.0.0.0-1.el8.x86_64.rpm
+          - http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/oracle-instantclient-devel-21.7.0.0.0-1.el8.x86_64.rpm
+          - http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/oracle-instantclient-sqlplus-21.7.0.0.0-1.el8.x86_64.rpm
         state: present
