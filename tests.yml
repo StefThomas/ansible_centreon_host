@@ -1,0 +1,21 @@
+---
+- name: Miscellaneous tests
+  hosts: central_centreon
+  gather_facts: false
+  tasks:
+    - name: Test of a creating a file with content
+      copy:
+        dest: /tmp/ansible_test
+        content: |
+          /plop/*.log /plop/*.foo {
+              bla
+              bla
+          }
+          
+          /plop_again/*.log /plop/*.bar {
+              bla
+              bla
+              
+              hop
+          }
+

@@ -1,0 +1,28 @@
+---
+- name: Configure logrotate
+  hosts: central_centreon
+  gather_facts: false
+  tasks:
+    - name: Configure logrotate
+      copy:
+        dest: /etc/logrotate.d/supervision
+        content: |
+          /opt/GrabInventoryToSupervision/log/*.log /opt/GrabInventoryToSupervision/log/*.csv {
+              compress
+              daily
+              missingok
+              rotate 31
+              copytruncate
+              delaycompress
+          }
+          
+          /var/log/supervision.log {
+              compress
+              daily
+              missingok
+              rotate 7
+              copytruncate
+              delaycompress
+          }
+
+

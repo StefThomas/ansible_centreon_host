@@ -9,4 +9,7 @@
           - python2-pip
           - python2-devel
           - gcc
-          
+    - name: Install some libraries via PIP
+      pip:
+        executable: '/usr/bin/pip2'
+        name: PyYAML, stompest, twisted, stompest.async, async

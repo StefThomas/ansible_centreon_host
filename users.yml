@@ -1,0 +1,15 @@
+---
+- name: Create users and needed directories
+  hosts: central_centreon
+  gather_facts: false
+  tasks:
+    - name: Create user grabinventorymonitoring (and directory)
+      user:
+        name: grabinventorymonitoring
+        comment: Synchro Kace
+      group:
+        name: grabinventorymonitoring
+      file:
+        path: /var/run/grabInventoryMonitoring
+        owner: grabinventorymonitoring
+        group: grabinventorymonitoring
