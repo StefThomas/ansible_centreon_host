@@ -31,6 +31,8 @@
           - centreon-plugin-Operatingsystems-Aix-Snmp
           - centreon-plugin-Applications-Databases-Oracle
           - perl-Nagios-Plugin
+          - centreon-plugin-Hardware-Storage-Hitachi-Hnas-Snmp
+          - centreon-plugin-Hardware-Storage-Hitachi-Standard-Snmp
         state: present
     - name: Install miscellaneaous packages
       yum:
