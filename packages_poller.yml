@@ -1,6 +1,6 @@
 ---
-- name: Install some packages on poller only
-  hosts: collecteurs_centreon
+- name: Install some packages on poller (central being considered as a poller too)
+  hosts: collecteurs_centreon:central_centreon
   gather_facts: false
   tasks:
     - name: Install the policycoreutils-python-utils package
@@ -19,7 +19,7 @@
       yum:
         name: rsync
         state: present
-    - name: Install some monitoring plugins
+    - name: Install some monitoring plugins and dependencies
       yum:
         name:
           - centreon-plugin-Applications-Protocol-Nrpe
@@ -30,6 +30,7 @@
           - centreon-plugin-Applications-Protocol-X509
           - centreon-plugin-Operatingsystems-Aix-Snmp
           - centreon-plugin-Applications-Databases-Oracle
+          - perl-Nagios-Plugin
         state: present
     - name: Install miscellaneaous packages
       yum:
