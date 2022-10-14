@@ -22,8 +22,8 @@
         url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/{{item}}
         dest: /tmp
         mode: '0755'
-        url_username: "{{artifactory_user}}"
-        url_password: "{{artifactory_password}}"
+        username: "{{artifactory_user}}"
+        password: "{{artifactory_password}}"
       with_items:
         - oracle-instantclient-basic-21.7.0.0.0-1.el8.x86_64.rpm
         - oracle-instantclient-devel-21.7.0.0.0-1.el8.x86_64.rpm
