@@ -21,8 +21,8 @@
       get_url: 
         url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/{{item}}
         dest: /tmp
-        mode: '0755'
-        username: 'ansible_etlo'
+        mode: 0755
+        username: ansible_etlo
         password: !vault |
           $ANSIBLE_VAULT;1.1;AES256
           66383065363837653465313134633031343038303263313263383437623036376365383732646639
@@ -34,7 +34,7 @@
         - oracle-instantclient-basic-21.7.0.0.0-1.el8.x86_64.rpm
         - oracle-instantclient-devel-21.7.0.0.0-1.el8.x86_64.rpm
         - oracle-instantclient-sqlplus-21.7.0.0.0-1.el8.x86_64.rpm
-    - name: Install Oracle client
+    - name: Install the Oracle client
       dnf:
         name:
           - /tmp/oracle-instantclient-basic-21.7.0.0.0-1.el8.x86_64.rpm
