@@ -3,7 +3,7 @@
   hosts: collecteurs_centreon:central_centreon
   gather_facts: false
 #  vars_files:
-#   - vars.yml
+#    - vars.yml
 #  vars:
 #    artifactory_user: 'ansible_etlo'
 #    artifactory_password: !vault |
@@ -19,7 +19,7 @@
 #        file: vars.yml
     - name: Download Oracle client RPM from Artifactory
       get_url: 
-        url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/{{item}}
+        url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/{{item}}"
         dest: /tmp
         mode: 0755
         username: ansible_etlo
@@ -34,6 +34,7 @@
         - oracle-instantclient-basic-21.7.0.0.0-1.el8.x86_64.rpm
         - oracle-instantclient-devel-21.7.0.0.0-1.el8.x86_64.rpm
         - oracle-instantclient-sqlplus-21.7.0.0.0-1.el8.x86_64.rpm
+
     - name: Install the Oracle client
       dnf:
         name:
