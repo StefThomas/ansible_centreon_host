@@ -3,10 +3,24 @@
   hosts: collecteurs_centreon:central_centreon
   gather_facts: false
   tasks:
+    - name: Include vers for file vars.yml
+      include_vars:
+        file: vars.yml
+    - name: Download Oracle client RPM from Artifactory
+      get_url: 
+        url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/{{item}}
+        dest: /tmp
+        mode: '0755'
+        url_username: "{{artifactory_username}}"
+        url_password: "{{artifactory_password}}"
+      with_items:
+        - oracle-instantclient-basic-21.7.0.0.0-1.el8.x86_64.rpm
+        - oracle-instantclient-devel-21.7.0.0.0-1.el8.x86_64.rpm
+        - oracle-instantclient-sqlplus-21.7.0.0.0-1.el8.x86_64.rpm
     - name: Install Oracle client
       dnf:
         name:
-          - http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/oracle-instantclient-basic-21.7.0.0.0-1.el8.x86_64.rpm
-          - http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/oracle-instantclient-devel-21.7.0.0.0-1.el8.x86_64.rpm
-          - http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/oracle-instantclient-sqlplus-21.7.0.0.0-1.el8.x86_64.rpm
+          - /tmp/oracle-instantclient-basic-21.7.0.0.0-1.el8.x86_64.rpm
+          - /tmp/oracle-instantclient-devel-21.7.0.0.0-1.el8.x86_64.rpm
+          - /tmp/oracle-instantclient-sqlplus-21.7.0.0.0-1.el8.x86_64.rpm
         state: present
