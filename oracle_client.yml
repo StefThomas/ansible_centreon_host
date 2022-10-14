@@ -26,7 +26,5 @@
         state: present
         disable_gpg_check: yes
     - name: Delete temporary files
-      file:
-        path: /tmp/oracle-instantclient-*
-        state: absent
- 
+      shell:
+        cmd: rm -f /tmp/oracle-instantclient-*
