@@ -2,9 +2,12 @@
 - name: Install Oracle packages
   hosts: collecteurs_centreon:central_centreon
   gather_facts: false
-  vars_files:
-   - vars.yml
+#  vars_files:
+#   - vars.yml
   tasks:
+    - name: Set vars from encrypted file
+      include_vars:
+        file: vars.yml
     - name: Download Oracle client RPM from Artifactory
       get_url: 
         url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/{{item}}
