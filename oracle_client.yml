@@ -39,8 +39,8 @@
     - name: Install the Oracle client
       dnf:
         name:
-          - file:///tmp/oracle-instantclient-basic-21.7.0.0.0-1.el8.x86_64.rpm
-          - file:///tmp/oracle-instantclient-devel-21.7.0.0.0-1.el8.x86_64.rpm
-          - file:///tmp/oracle-instantclient-sqlplus-21.7.0.0.0-1.el8.x86_64.rpm
+          - /tmp/oracle-instantclient-basic-21.7.0.0.0-1.el8.x86_64.rpm
+          - /tmp/oracle-instantclient-devel-21.7.0.0.0-1.el8.x86_64.rpm
+          - /tmp/oracle-instantclient-sqlplus-21.7.0.0.0-1.el8.x86_64.rpm
         state: present
-        validate_certs: no
+        disable_gpg_check: yes
