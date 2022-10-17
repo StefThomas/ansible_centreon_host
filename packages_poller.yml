@@ -2,7 +2,7 @@
 - name: Install some packages on poller (central being considered as a poller too)
   hosts: collecteurs_centreon_int:central_centreon_int
   gather_facts: false
-  group_vars:
+  vars:
     ansible_ssh_timeout: 60
   tasks:
     - name: Install the policycoreutils-python-utils package
