@@ -1,6 +1,6 @@
 ---
 - name: Install some packages on central server only
-  hosts: central_centreon
+  hosts: central_centreon_int
   gather_facts: false
   tasks:
     - name: Install the centreon-central package

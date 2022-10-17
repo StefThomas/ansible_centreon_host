@@ -1,6 +1,6 @@
 ---
 - name: Miscellaneous shit to do on pollers
-  hosts: collecteurs_centreon
+  hosts: collecteurs_centreon_int
   gather_facts: false
   tasks:
     - name: Manage starting of services

@@ -1,6 +1,6 @@
 ---
 - name: Install Python 2 + GCC + PIP + some Python libraries
-  hosts: central_centreon
+  hosts: central_centreon_int
   gather_facts: false
   tasks:
     - name: Install Python 2 + GCC + PIP + some Python libraries

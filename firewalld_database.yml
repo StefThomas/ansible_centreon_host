@@ -1,6 +1,6 @@
 ---
 - name: Install and configure Firewalld on database server
-  hosts: database_centreon
+  hosts: database_centreon_int
   gather_facts: false
   tasks:
     - name: Install the firewalld package

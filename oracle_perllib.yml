@@ -1,6 +1,6 @@
 ---
 - name: Install Perl library DBD:Oracle
-  hosts: collecteurs_centreon:central_centreon
+  hosts: collecteurs_centreon_int:central_centreon_int
   gather_facts: false
   tasks:
     - name: Set vars from encrypted file
@@ -33,4 +33,3 @@
         path: /etc/ld.so.conf.d/oracle.conf
         line: '/usr/lib/oracle/21/client64/lib/'
         create: yes
-

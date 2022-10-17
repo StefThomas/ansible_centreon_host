@@ -1,6 +1,6 @@
 ---
 - name: Install some packages on the database server only
-  hosts: database_centreon
+  hosts: database_centreon_int
   gather_facts: false
   tasks:
     - name: Install the centreon-database package

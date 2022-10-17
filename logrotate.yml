@@ -1,6 +1,6 @@
 ---
 - name: Configure logrotate
-  hosts: central_centreon
+  hosts: central_centreon_int
   gather_facts: false
   tasks:
     - name: Configure logrotate
