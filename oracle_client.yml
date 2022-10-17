@@ -7,7 +7,7 @@
       include_vars:
         file: vars.yml
     - name: Download Oracle client RPM from Artifactory
-      get_url: 
+      get_url:
         url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-rhel8/{{item}}"
         dest: /tmp
         mode: 0755
@@ -24,7 +24,7 @@
           - /tmp/oracle-instantclient-devel-21.7.0.0.0-1.el8.x86_64.rpm
           - /tmp/oracle-instantclient-sqlplus-21.7.0.0.0-1.el8.x86_64.rpm
         state: present
-        disable_gpg_check: yes
+        disable_gpg_check: true
     - name: Delete temporary files
       shell:
         cmd: rm -f /tmp/oracle-instantclient-*
