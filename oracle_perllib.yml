@@ -15,6 +15,7 @@
         password: "{{artifactory_password}}"
     - name: Untar Oracle Perl library DBD::Oracle
       unarchive:
+        remote_src: yes
         src: /usr/local/src/DBD-Oracle-1.83.tar.gz
         dest: /usr/local/src/DBD-Oracle-1.83
     - name: Create Makefile
@@ -32,4 +33,4 @@
       lineinfile:
         path: /etc/ld.so.conf.d/oracle.conf
         line: '/usr/lib/oracle/21/client64/lib/'
-        create: yes
+        create: true
