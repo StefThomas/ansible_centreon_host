@@ -3,7 +3,34 @@
   hosts: collecteurs_centreon:central_centreon
   gather_facts: false
   tasks:
-    - name: Download library DBD:Oracle
-      get_url:
-        url: http://www.cpan.org/modules/by-module/DBD/DBD-Oracle-1.83.tar.gz
+    - name: Set vars from encrypted file
+      include_vars:
+        file: vars.yml
+    - name: Download Oracle Perl library DBD::Oracle (v1.83)
+      get_url: 
+        url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-oraperllib/DBD-Oracle-1.83.tar.gz"
         dest: /usr/local/src/DBD-Oracle-1.83.tar.gz
+        mode: 0755
+        username: "{{artifactory_user}}"
+        password: "{{artifactory_password}}"
+    - name: Untar Oracle Perl library DBD::Oracle
+      unarchive:
+        src: /usr/local/src/DBD-Oracle-1.83.tar.gz
+        dest: /usr/local/src/DBD-Oracle-1.83
+    - name: Create Makefile
+      environment:
+        ORACLE_HOME: /usr/lib/oracle/21/client64
+        LD_LIBRARY_PATH: /usr/lib/oracle/21/client64/lib/oracle/21/client64
+        PATH: "{{ansible_env.PATH}}:/usr/lib/oracle/21/client64
+      shell:
+        cmd: perl Makefile.PL -m /usr/share/oracle/21/client64/demo/demo.mk
+    - name: Compile and install the module
+      shell:
+        chdir: /usr/local/src/DBD-Oracle-1.83
+        cmd: make && make install
+    - name: Set loading of the library
+      lineinfile:
+        path: /etc/ld.so.conf.d/oracle.conf
+        line: '/usr/lib/oracle/21/client64/lib/'
+        create: yes
+
