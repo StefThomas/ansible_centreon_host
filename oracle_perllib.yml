@@ -7,7 +7,7 @@
       include_vars:
         file: vars.yml
     - name: Download Oracle Perl library DBD::Oracle (v1.83)
-      get_url: 
+      get_url:
         url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-oraperllib/DBD-Oracle-1.83.tar.gz"
         dest: /usr/local/src/DBD-Oracle-1.83.tar.gz
         mode: 0755
