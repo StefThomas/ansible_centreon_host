@@ -17,7 +17,7 @@
       unarchive:
         remote_src: true
         src: /usr/local/src/DBD-Oracle-1.83.tar.gz
-        dest: /usr/local/src/DBD-Oracle-1.83
+        dest: /usr/local/src/
         creates: /usr/local/src/DBD-Oracle-1.83
     - name: Create Makefile
       environment:
