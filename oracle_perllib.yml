@@ -25,6 +25,7 @@
         LD_LIBRARY_PATH: /usr/lib/oracle/21/client64/lib/oracle/21/client64
         PATH: "{{ansible_env.PATH}}:/usr/lib/oracle/21/client64"
       shell:
+        chdir: /usr/local/src/DBD-Oracle-1.83
         cmd: perl Makefile.PL -m /usr/share/oracle/21/client64/demo/demo.mk
     - name: Compile and install the module
       shell:
