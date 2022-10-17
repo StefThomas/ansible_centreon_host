@@ -1,0 +1,9 @@
+---
+- name: Install Perl library DBD:Oracle
+  hosts: collecteurs_centreon:central_centreon
+  gather_facts: false
+  tasks:
+    - name: Download library DBD:Oracle
+      get_url:
+        url: http://www.cpan.org/modules/by-module/DBD/DBD-Oracle-1.83.tar.gz
+        dest: /usr/local/src/DBD-Oracle-1.83.tar.gz

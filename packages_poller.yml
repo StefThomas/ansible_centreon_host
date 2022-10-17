@@ -4,23 +4,23 @@
   gather_facts: false
   tasks:
     - name: Install the policycoreutils-python-utils package
-      yum:
+      dnf:
         name: policycoreutils-python-utils
         state: present
     - name: Install the centreon-poller package
-      yum:
+      dnf:
         name: centreon-poller
         state: present
     - name: Install the net-snmp-utils package
-      yum:
+      dnf:
         name: net-snmp-utils
         state: present
     - name: Install the rsync package
-      yum:
+      dnf:
         name: rsync
         state: present
     - name: Install some monitoring plugins and dependencies
-      yum:
+      dnf:
         name:
           - centreon-plugin-Applications-Protocol-Nrpe
           - centreon-plugin-Applications-Protocol-Tcp
@@ -35,6 +35,6 @@
           - centreon-plugin-Hardware-Storage-Hitachi-Standard-Snmp
         state: present
     - name: Install miscellaneaous packages
-      yum:
-        name: jq
+      dnf:
+        name: jq, gcc
         state: present
