@@ -18,6 +18,7 @@
         remote_src: true
         src: /usr/local/src/DBD-Oracle-1.83.tar.gz
         dest: /usr/local/src/DBD-Oracle-1.83
+        creates: true
     - name: Create Makefile
       environment:
         ORACLE_HOME: /usr/lib/oracle/21/client64
