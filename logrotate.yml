@@ -24,5 +24,13 @@
               copytruncate
               delaycompress
           }
-
-
+          
+          /var/log/centreon/dependencies.log {
+              compress
+              daily
+              missingok
+              rotate 7
+              copytruncate
+              delaycompress
+              su centreon centreon
+          }

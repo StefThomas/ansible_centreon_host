@@ -11,7 +11,7 @@
         line: >
           30 23 * * * centreon /var/spool/centreon/Indus_Dependencies.sh -G /tmp/HOST_LIST
           && for i in $(cat /tmp/HOST_LIST) ; do /var/spool/centreon/Indus_Dependencies.sh -H $i;
-          done >> /var/log/centreon/dependancies.log 2>&1
+          done >> /var/log/centreon/dependencies.log 2>&1
         create: yes
     - name: Crontab to synchronize plugins
       lineinfile:
