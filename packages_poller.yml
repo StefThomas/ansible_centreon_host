@@ -2,27 +2,25 @@
 - name: Install some packages on poller (central being considered as a poller too)
   hosts: collecteurs_centreon_int:central_centreon_int
   gather_facts: false
-  vars:
-    ansible_ssh_timeout: 60
   tasks:
     - name: Install the policycoreutils-python-utils package
-      dnf:
+      yum:
         name: policycoreutils-python-utils
         state: present
     - name: Install the centreon-poller package
-      dnf:
+      yum:
         name: centreon-poller
         state: present
     - name: Install the net-snmp-utils package
-      dnf:
+      yum:
         name: net-snmp-utils
         state: present
     - name: Install the rsync package
-      dnf:
+      yum:
         name: rsync
         state: present
     - name: Install some monitoring plugins and dependencies
-      dnf:
+      yum:
         name:
           - centreon-plugin-Applications-Protocol-Nrpe
           - centreon-plugin-Applications-Protocol-Tcp
@@ -37,6 +35,6 @@
           - centreon-plugin-Hardware-Storage-Hitachi-Standard-Snmp
         state: present
     - name: Install miscellaneaous packages
-      dnf:
+      yum:
         name: jq, gcc
         state: present
