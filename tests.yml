@@ -3,19 +3,22 @@
   hosts: central_centreon_int
   gather_facts: false
   tasks:
-    - name: Test of a creating a file with content
-      copy:
-        dest: /tmp/ansible_test
-        content: |
-          /plop/*.log /plop/*.foo {
-              bla
-              bla
-          }
-          
-          /plop_again/*.log /plop/*.bar {
-              bla
-              bla
-              
-              hop
-          }
+#    - name: Test of a creating a file with content
+#      copy:
+#        dest: /tmp/ansible_test
+#        content: |
+#          /plop/*.log /plop/*.foo {
+#              bla
+#              bla
+#          }
+#          
+#          /plop_again/*.log /plop/*.bar {
+#              bla
+#              bla
+#              
+#              hop
+#          }
+     - name: Sleep one minute
+       shell:
+         cmd: sleep 60
 
