@@ -1,9 +1,10 @@
 ---
+# ansible.builtin.cron should be used there but I don’t have time to learn another Ansible module and need to master the inlinefile module
 - name: Some crontabs
   hosts: central_centreon_int
   gather_facts: false
   tasks:
-    - name: Reload pollers
+    - name: Crontab to Indus_Dependencies.sh
       lineinfile:
         path: /etc/cron.d/sihm_centreon_auto_dependencies
         line: >
@@ -11,3 +12,15 @@
           && for i in $(cat /tmp/HOST_LIST) ; do /var/spool/centreon/Indus_Dependencies.sh -H $i;
           done >> /var/log/centreon/dependancies.log 2>&1
         create: yes
+    - name: Crontab to synchronize plugins
+      lineinfile:
+        path: /etc/cron.d/sihm_sync_plugins
+        line: >
+          0 5 * * * centreon /usr/share/centreon/cron/sync_sihm_plugins -v -p
+          "sup37int23:/usr/lib/centreon/plugins/SIHM/ sup37int24:/usr/lib/centreon/plugins/SIHM/"
+          >> /var/log/centreon/sync_sihm_plugins.log 2>&1
+        create: yes
+    - name: Crontab to reload pollers
+      lineinfile:
+        path: /var/spool/cron/root
+        line: '0 6,11,15 * * 1-5 /usr/local/bin/restart_poller.ksh > /dev/null 2>&1'
