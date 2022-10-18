@@ -19,21 +19,22 @@
       dnf:
         name: rsync
         state: present
-    - name: Install some monitoring plugins and dependencies
+    - name: Install some monitoring plugins and their dependencies
       dnf:
         name:
           - centreon-plugin-Applications-Protocol-Nrpe
           - centreon-plugin-Applications-Protocol-Tcp
           - centreon-plugin-Network-Firewalls-Checkpoint-Snmp
-          - nagios-plugins-cluster
-          - nagios-plugins-snmp
           - centreon-plugin-Applications-Protocol-X509
           - centreon-plugin-Operatingsystems-Aix-Snmp
           - centreon-plugin-Applications-Databases-Oracle
           - centreon-plugin-Applications-Databases-Postgresql
-          - perl-Nagios-Plugin
+          - perl-DBD-Pg
           - centreon-plugin-Hardware-Storage-Hitachi-Hnas-Snmp
           - centreon-plugin-Hardware-Storage-Hitachi-Standard-Snmp
+          - nagios-plugins-cluster
+          - nagios-plugins-snmp
+          - perl-Nagios-Plugin
         state: present
     - name: Install miscellaneaous packages
       dnf:
