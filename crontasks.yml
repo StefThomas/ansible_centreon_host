@@ -1,0 +1,13 @@
+---
+- name: Some crontabs
+  hosts: central_centreon_int
+  gather_facts: false
+  tasks:
+    - name: Reload pollers
+      lineinfile:
+        path: /etc/cron.d/sihm_centreon_auto_dependencies
+        line: >
+          '30 23 * * * centreon /var/spool/centreon/Indus_Dependencies.sh -G /tmp/HOST_LIST
+          && for i in $(cat /tmp/HOST_LIST) ; do /var/spool/centreon/Indus_Dependencies.sh -H $i;
+          done >> /var/log/centreon/dependancies.log 2>&1'
+        create: yes
