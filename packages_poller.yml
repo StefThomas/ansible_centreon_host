@@ -3,22 +3,6 @@
   hosts: collecteurs_centreon_int:central_centreon_int
   gather_facts: false
   tasks:
-    - name: Install the policycoreutils-python-utils package
-      dnf:
-        name: policycoreutils-python-utils
-        state: present
-    - name: Install the centreon-poller package
-      dnf:
-        name: centreon-poller
-        state: present
-    - name: Install the net-snmp-utils package
-      dnf:
-        name: net-snmp-utils
-        state: present
-    - name: Install the rsync package
-      dnf:
-        name: rsync
-        state: present
     - name: Install some monitoring plugins and their dependencies
       dnf:
         name:
@@ -32,12 +16,15 @@
           - perl-DBD-Pg
           - centreon-plugin-Hardware-Storage-Hitachi-Hnas-Snmp
           - centreon-plugin-Hardware-Storage-Hitachi-Standard-Snmp
+          - centreon-plugin-Cloud-Prometheus-Api
+          - centreon-poller
           - nagios-plugins-cluster
           - nagios-plugins-snmp
           - nagios-plugins-nrpe
           - perl-Nagios-Plugin
+          - net-snmp-utils
         state: present
     - name: Install miscellaneaous packages
       dnf:
-        name: jq, gcc
+        name: jq, gcc, rsync, policycoreutils-python-utils
         state: present
