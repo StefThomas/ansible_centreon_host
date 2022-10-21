@@ -1,0 +1,15 @@
+---
+- name: Install Openshift related stuff
+  hosts: collecteurs_centreon_int:central_centreon_int
+  gather_facts: false
+  tasks:
+    - name: Set vars from encrypted file
+      include_vars:
+        file: vars.yml
+    - name: Install kubectl from Artifactory (v1.25.3)
+      get_url:
+        url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-kubectl/kubectl"
+        dest: /usr/bin/
+        mode: ugo+x
+        username: "{{artifactory_user}}"
+        password: "{{artifactory_password}}"
