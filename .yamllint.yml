@@ -19,7 +19,7 @@ rules:
     level: warning
   empty-lines: enable
   empty-values: disable
-  float-values: disable
+  # Not in yamllint 1.26 float-values: disable
   hyphens: enable
   indentation: enable
   key-duplicates: enable
