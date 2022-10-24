@@ -1,0 +1,26 @@
+---
+- name: Install miscellaneous scripts
+  hosts: central_centreon_int
+  gather_facts: false
+  tasks:
+    - name: Set vars from encrypted file
+      include_vars:
+        file: vars.yml
+    - name: Install Indus_Dependencies script
+      get_url:
+        url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-miscellaneous/Indus_Dependencies.sh"
+        dest: /var/spool/centreon/
+        mode: 0750
+        username: "{{artifactory_user}}"
+        password: "{{artifactory_password}}"
+        owner: centreon
+        group: centreon
+    - name: Install sync_sihm_plugins script
+      get_url:
+        url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-miscellaneous/sync_sihm_plugins"
+        dest: /usr/share/centreon/cron/
+        mode: 0755
+        username: "{{artifactory_user}}"
+        password: "{{artifactory_password}}"
+        owner: root
+        group: root
