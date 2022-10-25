@@ -7,7 +7,7 @@
     - name: Crontab to Indus_Dependencies.sh
       lineinfile:
         path: /etc/cron.d/sihm_centreon_auto_dependencies
-        regexp: Indus_Dependencies.sh 
+        regexp: Indus_Dependencies.sh
         line: >
           30 23 * * * centreon /var/spool/centreon/Indus_Dependencies.sh -G /tmp/HOST_LIST
           && for i in $(cat /tmp/HOST_LIST) ; do /var/spool/centreon/Indus_Dependencies.sh -H $i;

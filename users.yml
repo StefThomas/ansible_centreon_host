@@ -3,7 +3,7 @@
   hosts: central_centreon_int
   gather_facts: false
   tasks:
-    - name: Create user grabinventorymonitoring (and directory)
+    - name: Create user grabinventorymonitoring and its directory
       user:
         name: grabinventorymonitoring
         comment: Synchro Kace
