@@ -7,7 +7,7 @@
       include_vars:
         file: vars.yml
       no_log: true
-    - name: Install Indus_Dependencies script
+    - name: Install Indus_Dependencies.sh script
       get_url:
         url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-miscellaneous/Indus_Dependencies.sh"
         dest: /var/spool/centreon/
@@ -20,6 +20,15 @@
       get_url:
         url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-miscellaneous/sync_sihm_plugins"
         dest: /usr/share/centreon/cron/
+        mode: 0755
+        username: "{{artifactory_user}}"
+        password: "{{artifactory_password}}"
+        owner: root
+        group: root
+    - name: Install centreon-logs.sh script
+      get_url:
+        url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-miscellaneous/centreon-logs.sh"
+        dest: /root/
         mode: 0755
         username: "{{artifactory_user}}"
         password: "{{artifactory_password}}"
