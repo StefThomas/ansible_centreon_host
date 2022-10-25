@@ -27,5 +27,5 @@
         state: present
     - name: Install miscellaneaous packages
       dnf:
-        name: jq, gcc, rsync, policycoreutils-python-utils
+        name: jq, gcc, rsync, policycoreutils-python-utils, bind-utils
         state: present
