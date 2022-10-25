@@ -3,8 +3,16 @@
   hosts: Integration_Centreon
   gather_facts: false
   tasks:
-    - name: Install useful utilities
+    - name: Install useful utilities on all servers
       yum:
-        name: nano, openldap-clients, lsof, traceroute, yum-utils, mailx, jq, git
+        name: 
+          - nano
+          - openldap-clients
+          - lsof
+          - traceroute
+          - yum-utils
+          - mailx
+          - jq
+          - git
         state: present
  
