@@ -22,7 +22,10 @@
           "sup37int23:/usr/lib/centreon/plugins/SIHM/ sup37int24:/usr/lib/centreon/plugins/SIHM/"
           >> /var/log/centreon/sync_sihm_plugins.log 2>&1
         create: yes
-    - name: Crontab to reload pollers
+    - name: root crontabs
       lineinfile:
         path: /var/spool/cron/root
-        line: '0 6,11,15 * * 1-5 /usr/local/bin/restart_poller.ksh > /dev/null 2>&1'
+        line: "{{item}}"
+      with_items:
+        - '0 6,11,15 * * 1-5 /usr/local/bin/restart_poller.ksh > /dev/null 2>&1'
+        - '0 7-20 * * * /root/centreon-logs.sh'
