@@ -11,4 +11,3 @@
       command:
         cmd: dnf -y module install php:remi-8.0
         warn: false
- 
