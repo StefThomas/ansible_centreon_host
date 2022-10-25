@@ -9,8 +9,8 @@
         state: present
     - name: Activate and start Firewalld
       shell:
-         cmd: systemctl enable firewalld && systemctl start firewalld
-         warn: false
+        cmd: systemctl enable firewalld && systemctl start firewalld
+        warn: false
     - name: Add rule for SSH
       command:
         cmd: firewall-cmd --zone=public --add-service=ssh --permanent
