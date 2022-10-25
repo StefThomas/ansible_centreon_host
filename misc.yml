@@ -7,4 +7,3 @@
       command:
         cmd: chmod 0600 /etc/dnf/dnf.conf /etc/yum.conf
         warn: false
-    
