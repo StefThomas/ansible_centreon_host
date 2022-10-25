@@ -15,12 +15,12 @@
       shell:
         cmd: dnf install -y https://rpms.remirepo.net/enterprise/remi-release-8.rpm
         warn: false
-      when: inventory_hostname in groups['collecteur_centreon_int']
+      when: inventory_hostname in groups['collecteurs_centreon_int']
     - name: Enable CodeReady Builder repository
       shell:
         cmd: subscription-manager repos --enable codeready-builder-for-rhel-8-x86_64-rpms
         warn: false
-      when: inventory_hostname in groups['collecteur_centreon_int']
+      when: inventory_hostname in groups['collecteurs_centreon_int']
     - name: Install Centreon repository
       shell:
         cmd: dnf install -y https://yum.centreon.com/standard/22.04/el8/stable/noarch/RPMS/centreon-release-22.04-3.el8.noarch.rpm
