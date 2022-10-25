@@ -3,12 +3,13 @@
   hosts: central_centreon_int
   gather_facts: false
   tasks:
-    - name: Create user grabinventorymonitoring and its directory
+    - name: Create user grabinventorymonitoring
       user:
         name: grabinventorymonitoring
         comment: Synchro Kace
       group:
         name: grabinventorymonitoring
+    - name: Create its directory
       file:
         path: /var/run/grabInventoryMonitoring
         owner: grabinventorymonitoring
