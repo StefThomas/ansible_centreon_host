@@ -34,3 +34,7 @@
         password: "{{artifactory_password}}"
         owner: root
         group: root
+    - name: Make directory for script above
+      file:
+        path: /var/tmp/centreon-logs/
+        state: directory
