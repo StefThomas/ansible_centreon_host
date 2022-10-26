@@ -11,11 +11,11 @@
 #              bla
 #              bla
 #          }
-#          
+#
 #          /plop_again/*.log /plop/*.bar {
 #              bla
 #              bla
-#              
+#
 #              hop
 #          }
 #     - name: Sleep one minute
