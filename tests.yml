@@ -22,6 +22,7 @@
 #       shell:
 #         cmd: sleep 60
      - name: 'Test on « changed_when: false »'
-       shell:
-         cmd: 'true'
+       copy:
+         dest: /tmp/plop
+         content: 'Bla'
        changed_when: false
