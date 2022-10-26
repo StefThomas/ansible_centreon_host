@@ -18,7 +18,9 @@
 #              
 #              hop
 #          }
-     - name: Sleep one minute
+#     - name: Sleep one minute
+#       shell:
+#         cmd: sleep 60
+     - name: 'Test on « changed_when: false »'
        shell:
-         cmd: sleep 60
-
+         cmd: true
