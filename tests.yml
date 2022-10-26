@@ -25,4 +25,5 @@
        copy:
          dest: /tmp/plop
          content: 'Bla'
-       changed_when: false
+       register: plop
+       changed_when: plop.changed
