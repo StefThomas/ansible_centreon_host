@@ -27,5 +27,7 @@
         state: present
         disable_gpg_check: true
     - name: Delete temporary files
+      # Use of shell module because the file module doesn’t support globbing
       shell:
         cmd: rm -f /tmp/oracle-instantclient-*
+      warn: false
