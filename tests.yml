@@ -21,7 +21,8 @@
 #     - name: Sleep one minute
 #       shell:
 #         cmd: sleep 60
-     - name: 'Test on « changed_when: false »'
+     - name: 'Test on « changed_when: »'
+       # Ici la tâche sera considérée comme “changed” seulement si le fichier n’existait pas déjà
        copy:
          dest: /tmp/plop
          content: 'Bla'
