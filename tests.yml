@@ -24,3 +24,4 @@
      - name: 'Test on « changed_when: false »'
        shell:
          cmd: 'true'
+       changed_when: false

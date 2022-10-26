@@ -15,7 +15,7 @@
               copytruncate
               delaycompress
           }
-          
+
           /var/log/supervision.log {
               compress
               daily
@@ -24,7 +24,7 @@
               copytruncate
               delaycompress
           }
-          
+
           /var/log/centreon/dependencies.log {
               compress
               daily
