@@ -23,4 +23,4 @@
 #         cmd: sleep 60
      - name: 'Test on « changed_when: false »'
        shell:
-         cmd: true
+         cmd: 'true'
