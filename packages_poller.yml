@@ -23,6 +23,7 @@
           - nagios-plugins-cluster
           - nagios-plugins-snmp
           - nagios-plugins-nrpe
+          - nagios-plugins-tcp
           - perl-Nagios-Plugin
           - net-snmp-utils
         state: present
