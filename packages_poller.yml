@@ -13,6 +13,7 @@
           - centreon-plugin-Operatingsystems-Aix-Snmp
           - centreon-plugin-Applications-Databases-Oracle
           - centreon-plugin-Applications-Databases-Postgresql
+          - centreon-plugin-Applications-Webservers-Apache-Serverstatus
           - perl-DBD-Pg
           - centreon-plugin-Hardware-Storage-Hitachi-Hnas-Snmp
           - centreon-plugin-Hardware-Storage-Hitachi-Standard-Snmp
