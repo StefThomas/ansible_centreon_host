@@ -25,6 +25,7 @@
           - nagios-plugins-snmp
           - nagios-plugins-nrpe
           - nagios-plugins-tcp
+          - centreon-nrpe3-plugin
           - perl-Nagios-Plugin
           - net-snmp-utils
         state: present
