@@ -22,5 +22,4 @@
 - import_playbook: python2.yml
 - import_playbook: sudoers.yml
 - import_playbook: users.yml
-- import_playbook: vars.yml
 ...
