@@ -26,6 +26,7 @@
           - /tmp/oracle-instantclient-sqlplus-21.7.0.0.0-1.el8.x86_64.rpm
         state: present
         disable_gpg_check: true
+      when: not ansible_check_mode
     - name: Delete temporary files
       # Use of shell module because the file module doesn’t support globbing
       shell:
