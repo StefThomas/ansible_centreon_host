@@ -1,6 +1,6 @@
 ---
-- hosts: all
 - name: Run all playbooks
+  hosts: all
 - import_playbook: crontabs.yml
 - import_playbook: dnfupdate.yml
 - import_playbook: firewalld_central.yml
