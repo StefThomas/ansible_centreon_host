@@ -1,4 +1,5 @@
 ---
+- hosts: all
 - name: Run all playbooks
 - import_playbook: crontabs.yml
 - import_playbook: dnfupdate.yml
