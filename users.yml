@@ -11,6 +11,7 @@
         path: /var/run/grabInventoryMonitoring
         owner: grabinventorymonitoring
         group: grabinventorymonitoring
+      when: not ansible_check_mode  
     - name: Create user grabinventorymonitoring
       user:
         name: grabinventorymonitoring
