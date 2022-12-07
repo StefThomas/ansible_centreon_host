@@ -18,6 +18,7 @@
           - centreon-plugin-Hardware-Storage-Hitachi-Hnas-Snmp
           - centreon-plugin-Hardware-Storage-Hitachi-Standard-Snmp
           - centreon-plugin-Hardware-Servers-Cisco-Ucs-Snmp
+          - centreon-plugin-Hardware-Servers-Hp-Snmp
           - centreon-plugin-Cloud-Prometheus-Api
           - centreon-plugin-Cloud-Kubernetes-Api
           - centreon-poller
