@@ -1,6 +1,6 @@
 ---
 - name: Edit sudo configuration
-  hosts: central_centreon_int
+  hosts: central_centreon
   gather_facts: false
   tasks:
     - name: sudo configuration for grabinventorymonitoring
