@@ -15,6 +15,6 @@
         state: present
     - name: Install plugin packs repository
       command:
-        cmd: yum -y install https://yum.centreon.com/plugin-packs/2e83f5ff110c44a9cab8f8c7ebbe3c4f/22.04/el8/stable/noarch/RPMS/centreon-plugin-packs-release-22.04-3.el8.noarch.rpm
+        cmd: yum -y install https://yum.centreon.com/plugin-packs/2e83f5ff110c44a9cab8f8c7ebbe3c4f/22.10/el8/stable/noarch/RPMS/centreon-plugin-packs-release-22.10-1.el8.noarch.rpm
         warn: false
 
