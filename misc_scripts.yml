@@ -1,6 +1,6 @@
 ---
 - name: Install miscellaneous scripts
-  hosts: central_centreon_int
+  hosts: central_centreon
   gather_facts: false
   tasks:
     - name: Set vars from encrypted file
