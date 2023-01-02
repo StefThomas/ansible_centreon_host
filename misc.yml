@@ -1,6 +1,6 @@
 ---
 - name: Miscellaneous shit
-  hosts: Integration_Centreon
+  hosts: Integration_Centreon:Production_Centreon
   gather_facts: false
   tasks:
     - name: Ensure some files aren’t world-writable
