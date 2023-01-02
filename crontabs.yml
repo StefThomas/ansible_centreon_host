@@ -1,7 +1,7 @@
 ---
 # ansible.builtin.cron should be used there but I don’t have time to learn another Ansible module and need to master the inlinefile module
 - name: Some crontabs
-  hosts: central_centreon_int
+  hosts: central_centreon
   gather_facts: false
   tasks:
     - name: Crontab to Indus_Dependencies.sh
