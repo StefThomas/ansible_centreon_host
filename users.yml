@@ -1,6 +1,6 @@
 ---
 - name: Create users and needed directories
-  hosts: central_centreon_int
+  hosts: central_centreon
   gather_facts: false
   tasks:
     - name: Create group grabinventorymonitoring
