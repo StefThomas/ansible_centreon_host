@@ -1,6 +1,6 @@
 ---
 - name: Install Oracle packages
-  hosts: collecteurs_centreon_int:central_centreon_int
+  hosts: collecteurs_centreon:central_centreon
   gather_facts: false
   tasks:
     - name: Set vars from encrypted file
