@@ -1,6 +1,6 @@
 ---
 - name: Install some packages
-  hosts: Integration_Centreon
+  hosts: Integration_Centreon:Production_Centreon
   gather_facts: false
   tasks:
     - name: Install useful utilities on all servers
