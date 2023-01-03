@@ -15,3 +15,10 @@
           - jq
           - git
         state: present
+    - name: Remove unused packages on all servers
+      yum:
+        name:
+          - insights-client
+          - rhc
+          - python3-magic
+        state: absent
