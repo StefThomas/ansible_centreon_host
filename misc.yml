@@ -3,7 +3,7 @@
   hosts: Integration_Centreon:Production_Centreon
   gather_facts: false
   tasks:
-    - name: Ensure some files aren’t world-writable
+    - name: Ensure some files aren’t world-readable
       command:
         cmd: chmod 0600 /etc/dnf/dnf.conf /etc/yum.conf
         warn: false
