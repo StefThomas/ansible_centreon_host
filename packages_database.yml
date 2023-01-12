@@ -7,3 +7,4 @@
       yum:
         name: centreon-database
         state: present
+      ignore_errors: "{{ ansible_check_mode }}"
