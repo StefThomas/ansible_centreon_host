@@ -13,3 +13,4 @@
       pip:
         executable: '/usr/bin/pip2'
         name: PyYAML==5.1.0, stompest.async==2.1.6, stompest==2.3.0, Twisted==12.2.0, async==0.6.2
+      ignore_errors: "{{ ansible_check_mode }}"
