@@ -20,6 +20,7 @@
         src: /usr/local/src/DBD-Oracle-1.83.tar.gz
         dest: /usr/local/src/
         creates: /usr/local/src/DBD-Oracle-1.83
+      ignore_errors: "{{ ansible_check_mode }}"
     - name: Create Makefile
       environment:
         ORACLE_HOME: /usr/lib/oracle/21/client64
@@ -28,12 +29,15 @@
       shell:
         chdir: /usr/local/src/DBD-Oracle-1.83
         cmd: perl Makefile.PL -m /usr/share/oracle/21/client64/demo/demo.mk
+      ignore_errors: "{{ ansible_check_mode }}"
     - name: Compile and install the module
       shell:
         chdir: /usr/local/src/DBD-Oracle-1.83
         cmd: make && make install
+      ignore_errors: "{{ ansible_check_mode }}"
     - name: Set loading of the library
       lineinfile:
         path: /etc/ld.so.conf.d/oracle.conf
         line: '/usr/lib/oracle/21/client64/lib/'
         create: true
+      ignore_errors: "{{ ansible_check_mode }}"
