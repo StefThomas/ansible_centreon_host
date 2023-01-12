@@ -25,6 +25,7 @@
         password: "{{artifactory_password}}"
         owner: root
         group: root
+      ignore_errors: "{{ ansible_check_mode }}"
     - name: Install centreon-logs.sh script
       get_url:
         url: "http://art37etu2.hm.dm.ad:8082/artifactory/oraclient-miscellaneous/centreon-logs.sh"
