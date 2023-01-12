@@ -7,6 +7,7 @@
       yum:
         name: centreon-central
         state: present
+      ignore_errors: "{{ ansible_check_mode }}"
     - name: Install Python2 shits
       yum:
         name:
