@@ -7,13 +7,13 @@
 - import_playbook: packages_central.yml
 - import_playbook: packages_database.yml
 - import_playbook: packages_poller.yml
-- import_playbook: crontabs.yml
 - import_playbook: firewalld_central.yml
 - import_playbook: firewalld_database.yml
 - import_playbook: firewalld_poller.yml
-- import_playbook: logrotate.yml
 - import_playbook: misc_poller.yml
 - import_playbook: misc_scripts.yml
+- import_playbook: crontabs.yml
+- import_playbook: logrotate.yml
 - import_playbook: misc.yml
 - import_playbook: openshift.yml
 - import_playbook: oracle_client.yml
