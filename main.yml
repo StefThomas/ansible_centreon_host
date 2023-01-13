@@ -1,8 +1,13 @@
 ---
 - name: Run all playbooks
   hosts: all
-- import_playbook: crontabs.yml
+- import_playbook: prerequisites.yml
 - import_playbook: dnfupdate.yml
+- import_playbook: packages.yml
+- import_playbook: packages_central.yml
+- import_playbook: packages_database.yml
+- import_playbook: packages_poller.yml
+- import_playbook: crontabs.yml
 - import_playbook: firewalld_central.yml
 - import_playbook: firewalld_database.yml
 - import_playbook: firewalld_poller.yml
@@ -13,13 +18,8 @@
 - import_playbook: openshift.yml
 - import_playbook: oracle_client.yml
 - import_playbook: oracle_perllib.yml
-- import_playbook: packages_central.yml
-- import_playbook: packages_database.yml
-- import_playbook: packages_poller.yml
-- import_playbook: packages.yml
 - import_playbook: php8.yml
 - import_playbook: pluginpacks.yml
-- import_playbook: prerequisites.yml
 - import_playbook: python2.yml
 - import_playbook: sudoers.yml
 - import_playbook: users.yml
