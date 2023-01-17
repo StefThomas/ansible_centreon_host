@@ -9,5 +9,5 @@
         warn: false
     - name: Install PHP 8
       command:
-        cmd: dnf -y module install php:remi-8.0
+        cmd: dnf -y module install php:remi-8.1
         warn: false
