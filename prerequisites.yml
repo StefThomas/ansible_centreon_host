@@ -23,5 +23,5 @@
       when: inventory_hostname in groups['central_centreon'] or inventory_hostname in groups['collecteurs_centreon']
     - name: Install Centreon repository
       shell:
-        cmd: dnf install -y https://yum.centreon.com/standard/22.04/el8/stable/noarch/RPMS/centreon-release-22.04-3.el8.noarch.rpm
+        cmd: dnf install -y https://yum.centreon.com/standard/22.10/el8/stable/noarch/RPMS/centreon-release-22.10-1.el8.noarch.rpm
         warn: false
